@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-profile',
@@ -8,9 +8,10 @@ import { Meta } from '@angular/platform-browser';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private meta: Meta) {
+  constructor(private meta: Meta, private title: Title) {
     this.meta.addTag({ name: 'description', content: 'How to use Angular 4 meta service' });
     this.meta.addTag({ name: 'author', content: 'talkingdotnet' });
+    this.title.setTitle('Angular 6');
   }
 
   ngOnInit() {

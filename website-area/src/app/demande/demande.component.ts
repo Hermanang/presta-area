@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-demande',
@@ -8,7 +9,8 @@ import { Meta } from '@angular/platform-browser';
 })
 export class DemandeComponent implements OnInit {
 
-  constructor(private meta: Meta) {
+  constructor(/*private router: Router, */private meta: Meta, private title: Title) {
+    this.title.setTitle('Angular');
     this.meta.addTag({ name: 'description', content: 'How to use Angular' });
     this.meta.addTag({ name: 'author', content: 'Hermann' });
   }
