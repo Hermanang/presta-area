@@ -6,13 +6,14 @@ import mongoose, {Schema} from 'mongoose';
 
 const ProfileSchema = mongoose.Schema({
     user: {
-        email: {
-            type: String,
-            required: true
-        },
         username: {
             type: String,
             required: true
+        },
+        hashedPassword: {
+            type: String,
+            required: false,
+            select: false
         }
     },
     last_name: {
@@ -23,17 +24,21 @@ const ProfileSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    phone_work: {
-        type: String,
-        required: true
-    },
-    phone_office: {
-        type: String
-    },
     addresses: {
-        primary_address: String,
-        secondary_address: String,
-        other_address: String
+        country: String,
+        town: String,
+        street: String,
+        email: {
+            type: String,
+            required: true
+        },
+        phone_work: {
+            type: String,
+            required: true
+        },
+        phone_office: {
+            type: String
+        }
     },
     date_birthday: {
         type: Date,

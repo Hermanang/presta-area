@@ -167,8 +167,8 @@
                                                     <h2><i class="careerfy-icon careerfy-check-mark"></i><a href="#"> {{candidate.last_name}} {{candidate.first_name}}</a></h2>
                                                     <ul>
                                                         <li>Fashion Designer at <a href="#" class="careerfy-candidate-default-studio">Yup Studio</a></li>
-                                                        <li><i class="fa fa-map-marker"></i> Netherlands, {{candidate.addresses.primary_address}}</li>
-                                                        <li><i class="careerfy-icon careerfy-envelope"></i> <a href="#">{{candidate.user.email}}</a></li>
+                                                        <li><i class="fa fa-map-marker"></i> {{candidate.addresses.country}}, {{candidate.addresses.town}}</li>
+                                                        <li><i class="careerfy-icon careerfy-envelope"></i> <a href="#">{{candidate.addresses.email}}</a></li>
                                                     </ul>
                                                 </div>
                                                 <a href="#" class="careerfy-candidate-default-btn"><i class="careerfy-icon careerfy-add-list"></i> Shortlist</a>

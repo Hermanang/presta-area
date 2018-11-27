@@ -28,18 +28,23 @@ for(let i=0; i<10; i++){
   }
 
   let profile = {
-    user: faker.helpers.userCard(),
+    user: {
+      username: faker.internet.userName()
+    },
     last_name: faker.name.firstName(),
     first_name: faker.name.lastName(),
-    phone_work: faker.phone.phoneNumber(),
-    phone_office: faker.phone.phoneNumberFormat(),
     date_birthday: Date.now(),
     birthday_place: faker.address.city(),
     resume: faker.lorem.paragraphs(),
+    country: faker.address.country(),
+    town: faker.address.city(),
     addresses: {
-      primary_address: faker.address.streetAddress(),
-      secondary_address: faker.address.streetAddress(),
-      other_address: faker.address.streetAddress()
+      country: faker.address.country(),
+      town: faker.address.city(),
+      street: faker.address.streetAddress(),
+      phone_work: faker.phone.phoneNumber(),
+      phone_office: faker.phone.phoneNumberFormat(),
+      email: faker.internet.email()
     },
     experiences: experiences,
     languages: [
