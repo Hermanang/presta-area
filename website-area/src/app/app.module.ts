@@ -6,20 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DemandeComponent } from './demande/demande.component';
-import { ProfileComponent } from './profile/profile.component';
+import { CandidateService } from './services/candidate.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemandeComponent,
-    ProfileComponent
+    DemandeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [CandidateService],
   bootstrap: [AppComponent]
 })
 

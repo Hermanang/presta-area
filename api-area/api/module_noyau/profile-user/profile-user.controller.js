@@ -9,7 +9,7 @@ const ProfileUserRepository = new GenericRepository(ProfileUser);
 export async function getAllProfileUser(req, res) {
     try {
         var allProfileUsers = await ProfileUserRepository.getAll();
-        return res.status(200).json({response: allProfileUsers});
+        return res.status(200).json(allProfileUsers);
     } catch (error) {
         return Errorshandling.handleError(res, 500, error, 'Erreur serveur (Mauvaise requete) !!!');
     }
