@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { CandidateService } from 'src/app/services/candidate.service';
+import { CandidateService } from '../candidate.service';
 // import { Meta, Title } from '@angular/platform-browser';
 
 @Component({

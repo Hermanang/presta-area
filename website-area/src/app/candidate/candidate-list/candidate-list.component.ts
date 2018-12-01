@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { CandidateService } from 'src/app/services/candidate.service';
 import { Router } from '@angular/router';
+import { CandidateService } from '../candidate.service';
 
 // import { Router } from '@angular/router';
 
@@ -36,7 +36,7 @@ export class CandidateListComponent implements OnInit {
     // Pass along the hero id if available
     // so that the HeroList component can select that hero.
     // Include a junk 'foo' property for fun.
-    this.router.navigate(['/candidate-center', candidateId]);
+    this.router.navigate(['/candidates', candidateId, 'get']);
   }
 
 }

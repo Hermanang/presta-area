@@ -14,7 +14,7 @@
                             <h2><a href="#">{{ candidate?.last_name }} {{ candidate?.first_name }}</a></h2>
                             <p>Financial Supervisor at <a href="#">Yup Studio</a></p>
                             <span>{{ candidate?.addresses?.country }}, {{ candidate?.addresses?.street }}</span>
-                            <small>Member Since, {{ candidate?.created_at }}</small>
+                            <small>Member Since, {{ candidate?.created_at | date: 'mediumDate' }}</small>
                             <ul>
                                 <li><a href="#" data-original-title="facebook" class="careerfy-icon careerfy-facebook-logo"></a></li>
                                 <li><a href="#" data-original-title="twitter" class="careerfy-icon careerfy-twitter-logo"></a></li>
