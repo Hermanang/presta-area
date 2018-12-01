@@ -6,6 +6,16 @@ import Errorshandling from '../../service/errorshandling';
 
 const ProfileUserRepository = new GenericRepository(ProfileUser);
 
+export async function getProfileUser(req, res) {
+    var id = req.params.id;
+    try {
+      var profileUser = await ProfileUserRepository.getOne({_id: id});
+      return res.json(profileUser);
+    } catch(error) {
+      return Errorshandling.handleError(res, 500, error, 'Erreur serveur !!!');
+    }
+  }
+
 export async function getAllProfileUser(req, res) {
     try {
         var allProfileUsers = await ProfileUserRepository.getAll();

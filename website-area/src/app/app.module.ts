@@ -1,27 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
-import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { DemandeComponent } from './demande/demande.component';
-import { CandidateService } from './services/candidate.service';
-import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { Router } from '@angular/router';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemandeComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    AppRoutingModule
   ],
-  providers: [CandidateService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+  constructor(router: Router) {}
+}

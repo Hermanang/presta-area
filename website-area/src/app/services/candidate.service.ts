@@ -15,6 +15,13 @@ export class CandidateService {
       )*/;
   }
 
+  getProfileUser(id) {
+    return this.http.get<any>(`http://localhost:9000/api/presta/profile_user/${id}`)
+      /*.pipe(
+        catchError(this.authService.handleError('getUsers'))
+      )*/;
+  }
+
   addProfileUser(profileUser) {
     return this.http.post<any>(`http://localhost:9000/api/presta/profile_user/add`, profileUser)
       /*.pipe(

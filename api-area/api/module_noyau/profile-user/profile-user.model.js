@@ -49,7 +49,7 @@ const ProfileSchema = mongoose.Schema({
     },
     created_at: {
         type: Date,
-        select: false,
+        select: true,
         default: Date.now()
     },
     resume: String,

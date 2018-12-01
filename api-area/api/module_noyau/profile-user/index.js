@@ -14,8 +14,9 @@ router.get('/:id', controller.getOneUser);
 */
 
 router.get('/', /*AuthService.hasRole('admin'), */controller.getAllProfileUser);
+router.get('/:id', /*AuthService.hasRole('admin'), */controller.getProfileUser);
 router.post('/add', /*AuthService.hasRole('admin'),*/ controller.addProfileUser);
 router.put('/edit/:id', /*AuthService.hasRole('admin'),*/ controller.editProfileUser);
-router.delete('/:id', /*AuthService.hasRole('admin'),*/ controller.deleteProfileUser);
+router.delete('/remove/:id', /*AuthService.hasRole('admin'),*/ controller.deleteProfileUser);
 
 module.exports = router;

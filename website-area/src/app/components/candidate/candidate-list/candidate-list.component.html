@@ -139,7 +139,7 @@
                     <div class="careerfy-typo-wrap">
                         <!-- FilterAble -->
                         <div class="careerfy-filterable">
-                            <h2>Showing 0-12 of 37 results</h2>
+                            <h2>Showing 0-12 of {{candidate_length }}</h2>
                             <ul>
                                 <li>
                                     <i class="careerfy-icon careerfy-sort"></i>
@@ -171,7 +171,7 @@
                                                         <li><i class="careerfy-icon careerfy-envelope"></i> <a href="#">{{candidate.addresses.email}}</a></li>
                                                     </ul>
                                                 </div>
-                                                <a href="#" class="careerfy-candidate-default-btn"><i class="careerfy-icon careerfy-add-list"></i> Shortlist</a>
+                                                <a (click)="gotoCandidate(candidate)" class="btn careerfy-candidate-default-btn"><i class="careerfy-icon careerfy-add-list"></i> Shortlist</a>
                                             </div>
                                         </div>
                                     </li>
