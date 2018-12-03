@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { CandidateService } from '../candidate.service';
+import { CandidateService } from '../../candidate.service';
 
 // import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-candidate',
+  selector: 'app-candidate-list',
   templateUrl: './candidate-list.component.html',
   styleUrls: ['./candidate-list.component.css']
 })
