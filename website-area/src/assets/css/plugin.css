@@ -1607,7 +1607,7 @@ ul li:hover .careerfy-employer-grid-btn {
 /* Employer Dashboard Navigation */
 .careerfy-employer-dashboard-nav ul li {
     list-style: none;
-    border-top: 1px solid #eceeef;
+    /*border-top: 1px solid #eceeef;*/
 }
 .careerfy-employer-dashboard-nav ul li a {
     padding: 16px 24px;

@@ -8,14 +8,19 @@ import { CandidateService } from '../candidate.service';
   templateUrl: './candidate-details.component.html',
   styles: [
     `
-      .nav-tabs{
-        margin-bottom: 45px !important;
-      }
+    .careerfy-employer-dashboard-nav {
+      box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.08);
+      padding: 0px 0px 0px 0px;
+    }
+    .careerfy-employer-dashboard-nav ul li a:focus {
+      box-shadow: 0px -5px 15px 0px rgba(0,0,0,0.08);
+    }
     `
   ]
 })
 export class CandidateDetailsComponent implements OnInit {
 
+  viewMode = 'tab1';
   candidate: any;
   constructor(
     private route: ActivatedRoute,
